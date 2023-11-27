@@ -1,0 +1,16 @@
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\bin\Debug\DAL.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\bin\Debug\DAL.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\obj\Debug\DAL.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\obj\Debug\DAL.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\bin\Debug\myBank.mdf
+C:\Users\thiag\Desktop\OOP - CA2 Final\DAL\bin\Debug\myBank_log.ldf
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\bin\Debug\myBank.mdf
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\bin\Debug\myBank_log.ldf
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\bin\Debug\DAL.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\bin\Debug\DAL.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\obj\Debug\DAL.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\DAL\obj\Debug\DAL.pdb
