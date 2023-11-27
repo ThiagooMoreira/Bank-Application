@@ -1,0 +1,22 @@
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\bin\Debug\BIZ.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\bin\Debug\BIZ.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\bin\Debug\DAL.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\bin\Debug\DAL.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\obj\Debug\BIZ.csproj.AssemblyReference.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\obj\Debug\BIZ.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\obj\Debug\BIZ.csproj.CopyComplete
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\obj\Debug\BIZ.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\obj\Debug\BIZ.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\bin\Debug\myBank.mdf
+C:\Users\thiag\Desktop\OOP - CA2 Final\BIZ\bin\Debug\myBank_log.ldf
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\bin\Debug\myBank.mdf
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\bin\Debug\myBank_log.ldf
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\bin\Debug\BIZ.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\bin\Debug\BIZ.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\bin\Debug\DAL.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\bin\Debug\DAL.pdb
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\obj\Debug\BIZ.csproj.AssemblyReference.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\obj\Debug\BIZ.csproj.CoreCompileInputs.cache
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\obj\Debug\BIZ.csproj.CopyComplete
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\obj\Debug\BIZ.dll
+C:\Users\thiag\Desktop\OOP - CA2 Final\OOP - CA2 Final\BIZ\obj\Debug\BIZ.pdb
