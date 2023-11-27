@@ -1,0 +1,110 @@
+﻿<Window x:Name="EditWindow" x:Class="OOP___CA2_Final.EditAccounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP___CA2_Final"
+        mc:Ignorable="d"
+        Title="EditAccounts" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Loaded="EditWindow_Loaded">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FF868686" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DockPanel Margin="0,0,0,429">
+            <Menu DockPanel.Dock="Top" Height="450" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}">
+                <MenuItem x:Name="menuFileMain" Header="File">
+                    <MenuItem Header="Log Out" x:Name="_eLogOut" Click="_eLogOut_Click"/>
+                    <MenuItem Header="Exit" x:Name="_eExit" Click="_eExit_Click"/>
+                </MenuItem>
+                <MenuItem Header="Account">
+                    <MenuItem Header="New Account" x:Name="_eNewAccount" Click="_eNewAccount_Click"/>
+                    <MenuItem Header="Edit Account" x:Name="_eEditAccount" Click="_eEditAccount_Click"/>
+                    <MenuItem Header="Deposit Funds" x:Name="_eDepositFunds" Click="_eDepositFunds_Click"/>
+                    <MenuItem Header="Withdraw Funds" x:Name="_eWithdrawFunds" Click="_eWithdrawFunds_Click"/>
+                    <MenuItem Header="Transfer Funds" x:Name="_eTransferFunds" Click="_eTransferFunds_Click"/>
+                    <MenuItem Header="View Transactions" x:Name="_eViewTransactions" Click="_eViewTransactions_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label x:Name="lblFirstn" Content="Firstname" HorizontalAlignment="Left" Margin="41,60,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="95" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtfirstn" HorizontalAlignment="Left" Margin="162,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Image x:Name="imgLogo2" HorizontalAlignment="Left" Height="184" Margin="550,0,0,0" VerticalAlignment="Center" Width="242" Source="images/dbs-bank-logo.png"/>
+        <Label x:Name="lblEditTitle" Content="Edit Accounts" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="18" FontStyle="Oblique"/>
+        <DataGrid x:Name="dgvEdit" Margin="41,239,284,26" SelectionChanged="dgvEdit_SelectionChanged" LoadingRow="dgvEdit_LoadingRow" IsReadOnly="True"/>
+        <Label x:Name="lblsurn" Content="Surname" HorizontalAlignment="Left" Margin="41,91,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="95" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="lblinitibal" Content="InitialBalance" HorizontalAlignment="Left" Margin="41,122,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="95" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtsurn" HorizontalAlignment="Left" Margin="162,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtinitbaal" HorizontalAlignment="Left" Margin="162,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="btnRefresh" Content="REFRESH" Margin="136,178,576,230" Background="White" RenderTransformOrigin="0.522,0.654" FontWeight="Bold" FontSize="14" Click="btnRefresh_Click_1"/>
+        <Button x:Name="btnSave" Content="SAVE" HorizontalAlignment="Left" Margin="339,178,0,0" VerticalAlignment="Top" Height="42" Width="86" Background="White" FontWeight="Bold" FontSize="14" Click="btnSave_Click" />
+    </Grid>
+</Window>

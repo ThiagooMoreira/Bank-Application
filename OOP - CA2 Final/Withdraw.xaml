@@ -1,0 +1,83 @@
+﻿<Window x:Name="WithdrawWindow" x:Class="OOP___CA2_Final.Withdraw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP___CA2_Final"
+        mc:Ignorable="d"
+        Title="Withdraw" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Loaded="WithdrawWindow_Loaded">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FF868686" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DockPanel Margin="0,0,0,429">
+            <Menu DockPanel.Dock="Top" Height="450" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}">
+                <MenuItem x:Name="menuFileMain" Header="File">
+                    <MenuItem Header="Log Out" x:Name="_wiLogOut" Click="_wiLogOut_Click"/>
+                    <MenuItem Header="Exit" x:Name="_wiExit" Click="_wiExit_Click"/>
+                </MenuItem>
+                <MenuItem Header="Account">
+                    <MenuItem Header="New Account" x:Name="_wiNewAccount" Click="_wiNewAccount_Click"/>
+                    <MenuItem Header="Edit Account" x:Name="_wiEditAccount" Click="_wiEditAccount_Click"/>
+                    <MenuItem Header="Deposit Funds" x:Name="_wiDepositFunds" Click="_wiDepositFunds_Click"/>
+                    <MenuItem Header="Withdraw Funds" x:Name="_wiWithdrawFunds" Click="_wiWithdrawFunds_Click"/>
+                    <MenuItem Header="Transfer Funds" x:Name="_wiTransferFunds" Click="_wiTransferFunds_Click"/>
+                    <MenuItem Header="View Transactions" x:Name="_wiViewTransactions" Click="_wiViewTransactions_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Image x:Name="imgLogo2" HorizontalAlignment="Left" Height="184" Margin="550,0,0,0" VerticalAlignment="Center" Width="242" Source="images/dbs-bank-logo.png"/>
+        <Label x:Name="lblWithdrawTitle" Content="Withdraw" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="18" FontStyle="Oblique"/>
+        <Label x:Name="lblDepositTo" Content="Account Holder" HorizontalAlignment="Left" Margin="72,71,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold"/>
+        <ComboBox x:Name="cboAccounts" HorizontalAlignment="Left" Margin="72,97,0,0" VerticalAlignment="Top" Width="338" Height="26" SelectionChanged="cboAccounts_SelectionChanged"/>
+        <Label x:Name="lblDisplayName" Content="" HorizontalAlignment="Left" Height="44" Margin="73,134,0,0" VerticalAlignment="Top" Width="337" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblWithAmount" Content="Withdraw Amount €" HorizontalAlignment="Left" Margin="72,326,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold"/>
+        <TextBox x:Name="txtWithAmount" HorizontalAlignment="Left" Margin="232,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblDepositCurrentAmt" Content="Current Balance    €" HorizontalAlignment="Left" Margin="72,207,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold"/>
+        <TextBox x:Name="txtWithCurrent" HorizontalAlignment="Left" Margin="232,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="btnWithdraw" Content="WITHDRAW" HorizontalAlignment="Left" Margin="313,393,0,0" VerticalAlignment="Top" Background="White" Width="120" Height="43" FontWeight="Bold" Click="btnWithdraw_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Label x:Name="lbloverdl" Content="Overdraft Limit     €" HorizontalAlignment="Left" Margin="72,236,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold"/>
+        <TextBox x:Name="txtoverdl" HorizontalAlignment="Left" Margin="232,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblTotal" Content="Total Available      €" HorizontalAlignment="Left" Margin="72,262,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold"/>
+        <TextBox x:Name="txttotalavl" HorizontalAlignment="Left" Margin="232,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Height="26" FontSize="18">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+    </Grid>
+</Window>
+

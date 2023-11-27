@@ -1,0 +1,164 @@
+﻿<Window x:Name="TransferWindow" x:Class="OOP___CA2_Final.Transfer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP___CA2_Final"
+        mc:Ignorable="d"
+        Title="Transfer" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Loaded="TransferWindow_Loaded">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FF868686" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DockPanel Margin="0,0,0,429">
+            <Menu DockPanel.Dock="Top" Height="450" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}">
+                <MenuItem x:Name="menuFileTransfers" Header="File">
+                    <MenuItem Header="Log Out" x:Name="_tLogOut" Click="_tLogOut_Click"/>
+                    <MenuItem Header="Exit" x:Name="_tExit" Click="_tExit_Click"/>
+                </MenuItem>
+                <MenuItem Header="Account">
+                    <MenuItem Header="New Account" x:Name="_tNewAccount" Click="_tNewAccount_Click"/>
+                    <MenuItem Header="Edit Account" x:Name="_tEditAccount" Click="_tEditAccount_Click"/>
+                    <MenuItem Header="Deposit Funds" x:Name="_tDepositFunds" Click="_tDepositFunds_Click"/>
+                    <MenuItem Header="Withdraw Funds" x:Name="_tWithdrawFunds" Click="_tWithdrawFunds_Click"/>
+                    <MenuItem Header="Transfer Funds" x:Name="_tTransferFunds" Click="_tTransferFunds_Click"/>
+                    <MenuItem Header="View Transactions" x:Name="_tViewTransactions" Click="_tViewTransactions_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Image x:Name="imgLogo2" HorizontalAlignment="Left" Height="184" Margin="550,0,0,0" VerticalAlignment="Center" Width="242" Source="images/dbs-bank-logo.png"/>
+        <Label x:Name="lblTransferTitle" Content="How much you wish to transfer today?" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="18" FontStyle="Oblique"/>
+        <Label x:Name="lblFr" Content="FROM" HorizontalAlignment="Left" Margin="74,76,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold"/>
+        <Label x:Name="lblTo" Content="TO" HorizontalAlignment="Left" Margin="73,248,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold"/>
+        <ComboBox x:Name="cboAccounts" HorizontalAlignment="Left" Margin="74,98,0,0" VerticalAlignment="Top" Width="444" Height="26" SelectionChanged="cboAccounts_SelectionChanged"/>
+        <Label x:Name="lblTransferCurrentAmount" Content="Balance" HorizontalAlignment="Left" Margin="74,157,0,0" VerticalAlignment="Top" Width="214" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lbltransferAccType" Content="Account Type" HorizontalAlignment="Left" Margin="74,274,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="95" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <RadioButton x:Name="rdotransfCurrent" Content="Current Account" HorizontalAlignment="Left" Margin="181,280,0,0" VerticalAlignment="Top" Background="White" Checked="rdotransfCurrent_Checked"/>
+        <RadioButton x:Name="rdotransfSavings" Content="Savings Account" HorizontalAlignment="Left" Margin="305,280,0,0" VerticalAlignment="Top" Background="White" Checked="rdotransfSavings_Checked"/>
+
+        <Label x:Name="lbltransferAccNo_" Content="Account No." HorizontalAlignment="Left" Margin="74,362,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="95" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtTransferAccNo_" HorizontalAlignment="Left" Margin="194,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Height="26" FontSize="14" TextChanged="txtTransferAccNo__TextChanged_1">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblTransferAmount" Content="Amount      (€)" HorizontalAlignment="Left" Margin="73,420,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="96" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtTransferTo" HorizontalAlignment="Left" Margin="194,420,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Height="26" FontSize="14">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblBalFrom" Content="" HorizontalAlignment="Left" Margin="404,160,0,0" VerticalAlignment="Top" Width="108" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="btnTransfer" Content="INT. TRANSFER" HorizontalAlignment="Left" Margin="522,402,0,0" VerticalAlignment="Top" Background="White" Width="120" Height="43" FontWeight="Bold" Click="btnTransfer_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Label x:Name="lblEuro" Content="€" HorizontalAlignment="Left" Margin="356,184,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Height="32" FontSize="16"/>
+        <Label x:Name="lblDisplayName" Content="" HorizontalAlignment="Left" Height="29" Margin="74,126,0,0" VerticalAlignment="Top" Width="444" FontWeight="Bold" FontSize="14"/>
+        <ComboBox x:Name="cboAccTo" HorizontalAlignment="Left" Margin="73,303,0,0" VerticalAlignment="Top" Width="444" Height="26" SelectionChanged="cboTo_SelectionChanged"/>
+        <RadioButton x:Name="rdoOtherBank" Content="Other Bank" HorizontalAlignment="Left" Margin="439,280,0,0" VerticalAlignment="Top" Background="White" Checked="rdoOtherBank_Checked"/>
+        <Label x:Name="lblTransferCurrentAmount_Copy" Content="Current Amount" HorizontalAlignment="Left" Margin="73,332,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lblEuro_Copy" Content="€" HorizontalAlignment="Left" Margin="358,329,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Height="32" FontSize="16"/>
+        <Label x:Name="lblBalTo" Content="" HorizontalAlignment="Left" Margin="402,332,0,0" VerticalAlignment="Top" Width="110" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lblAccountHolder" Content="Acc. Holder" HorizontalAlignment="Left" Margin="73,390,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF292929" RenderTransformOrigin="0.5,0.5" Width="96" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtAccHolder" HorizontalAlignment="Left" Margin="194,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Height="26" FontSize="14">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="lblAccSavings" Content="Is the Source's Account Savings?" HorizontalAlignment="Left" Height="40" Margin="73,45,0,0" VerticalAlignment="Top" Width="326" FontWeight="Bold" FontSize="14"/>
+        <RadioButton x:Name="rdoSavingsYes" Content="Yes" HorizontalAlignment="Left" Margin="389,49,0,0" VerticalAlignment="Top" Background="White" FontSize="16" FontWeight="Bold" Width="56" Checked="rdoSavingsYes_Checked"/>
+        <RadioButton x:Name="rdoSavingsNo" Content="No" HorizontalAlignment="Left" Margin="461,49,0,0" VerticalAlignment="Top" Background="White" FontSize="16" FontWeight="Bold" Width="56" Checked="rdoSavingsNo_Checked"/>
+        <Button x:Name="btnout" Content="OUT. TRANSF" HorizontalAlignment="Left" Margin="670,402,0,0" VerticalAlignment="Top" Background="White" Width="120" Height="43" FontWeight="Bold" Click="btnout_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.143"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Label x:Name="lblOverdraftLimit" Content="Overdraft Limit" HorizontalAlignment="Left" Margin="74,188,0,0" VerticalAlignment="Top" Width="214" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lblEuro_Copy1" Content="€" HorizontalAlignment="Left" Margin="356,154,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Height="32" FontSize="16"/>
+        <Label x:Name="lblOverdraft" Content="" HorizontalAlignment="Left" Margin="404,187,0,0" VerticalAlignment="Top" Width="108" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lblTotalBalance" Content="Total Balance" HorizontalAlignment="Left" Margin="74,220,0,0" VerticalAlignment="Top" Width="214" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="404,217,0,0" VerticalAlignment="Top" Width="108" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="lblEuro_Copy2" Content="€" HorizontalAlignment="Left" Margin="356,216,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Height="32" FontSize="16"/>
+    </Grid>
+</Window>
+

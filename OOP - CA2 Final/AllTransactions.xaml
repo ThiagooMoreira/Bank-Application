@@ -1,0 +1,46 @@
+﻿<Window x:Name="AllTransactionsWindows" x:Class="OOP___CA2_Final.AllTransactions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP___CA2_Final"
+        mc:Ignorable="d"
+        Title="AllTransactions" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Loaded="AllTransactionsWindows_Loaded">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FF868686" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DockPanel Margin="0,0,0,429">
+            <Menu DockPanel.Dock="Top" Height="450" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}">
+                <MenuItem x:Name="menuFile" Header="File">
+                    <MenuItem Header="Log Out" x:Name="_allLogOut" Click="_allLogOut_Click"/>
+                    <MenuItem Header="Exit" x:Name="_allExit" Click="_allExit_Click"/>
+                </MenuItem>
+                <MenuItem Header="Account">
+                    <MenuItem Header="New Account" x:Name="_allNewAccount" Click="_allNewAccount_Click"/>
+                    <MenuItem Header="Edit Account" x:Name="_allEditAccount" Click="_allEditAccount_Click"/>
+                    <MenuItem Header="Deposit Funds" x:Name="_allDepositFunds" Click="_allDepositFunds_Click"/>
+                    <MenuItem Header="Withdraw Funds" x:Name="_allWithdrawFunds" Click="_allWithdrawFunds_Click"/>
+                    <MenuItem Header="Transfer Funds" x:Name="_allTransferFunds" Click="_allTransferFunds_Click"/>
+                    <MenuItem Header="View Transactions" x:Name="_allViewTransactions" Click="_allViewTransactions_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Image x:Name="imgLogo2" HorizontalAlignment="Left" Height="184" Margin="550,0,0,0" VerticalAlignment="Center" Width="242" Source="images/dbs-bank-logo.png"/>
+        <Label x:Name="lblAllTranTitle" Content="All Transactions" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="18" FontStyle="Oblique"/>
+        <ListBox x:Name="lstView" HorizontalAlignment="Left" Height="323" Margin="9,90,0,0" VerticalAlignment="Top" Width="573" Background="#FFD0D0D0" Padding="2,2,2,2">
+            <DataGrid x:Name="dgvtransac"  Height="204" Width="506" Margin="24,70,25,0"/>
+            <ComboBox x:Name="cboAType" Height ="21" Width="120" Margin="130,-482,0,0" SelectionChanged="cboAType_SelectionChanged"/>
+            <Button x:Name="btnByAccType1" Content="By Account Type" Height="21" Width="100" Margin="24,-490,0,0" Click="btnByAccType1_Click"/>
+            <Button x:Name="btnAllAccounts" Content="All Accounts" Height="21" Width="100" Margin="295,-497,0,0" Click="btnAllAccounts_Click"/>
+            
+            <Button x:Name="btnShowAll" Content="Show All" Height="21" Width="100" Margin="429,-503,0,0" Click="btnShowAll_Click"/>
+            
+            
+
+        </ListBox>
+    </Grid>
+</Window>
